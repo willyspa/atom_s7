@@ -1,5 +1,28 @@
-h1
+.primary, .secondary, .warning, .info, .danger, .success, .light, .dark, .medium-light
 {
-
-
+    width: 70px; height: 70px;
+    display: inline-block;
+    margin-right: 5px;
 }
+
+.primary { background: #020fff; }
+.primary:hover { background: #0000ca; }  
+
+.secondary { background: #ffeb3b; }
+.secondary:hover { background: #ffff72; }
+
+.warning { background: #FFB82D; }
+.warning:hover {background: #FFA26B;}  
+   
+.light { background: #f5f5f5; }
+.dark { background: #c2c2c2; }
+.medium-light { background: #dadada; }
+
+.success { background: #21B9B3; }
+.success:hover { background: #00C48C; }
+
+.info { background: #7256D3; }
+.info:hover { background: #7256FF; }
+
+.danger { background: #FF7100; }
+.danger:hover { background: #FF0000; }
