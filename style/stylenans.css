@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Damion|Muli:400,600');
+$primary: #4F2EDC
+$primary-light: #947ADA
+$gray: #9A9999
+
+ body{
+   font-family: 'Muli', sans-serif;
+   background: url("https://www.toptal.com/designers/subtlepatterns/patterns/geometry2.png");
+ }
+
 /* Table CSS */
 
 .some-page-wrapper {
@@ -27,6 +37,102 @@
 
 .toggle-column {
   height: 100px;
+}
+
+
+head-special {
+  font-family: 'Damion', cursive;
+  font-weight: 400;
+  color: #4caf50;
+  font-size: 35px;
+  text-align: center;
+  position: relative;
+}
+head-special:before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  left: 0;
+  top: 22px;
+  background: #4caf50;
+  height: 1px;
+}
+head-special i {
+  font-style: normal;
+  background: #fff;
+  position: relative;
+  padding: 10px;
+}
+:focus{outline: none;}
+/* Input form */
+/* necessary to give position: relative to parent. */
+input[type="text"]{font: 15px/24px 'Muli', sans-serif; color: #333; width: 100%; box-sizing: border-box; letter-spacing: 1px;}
+
+:focus{outline: none;}
+
+.col-3{float: left; width: 27.33%; margin: 40px 3%; position: relative;} /* necessary to give position: relative to parent. */
+input[type="text"]{font: 15px/24px "Lato", Arial, sans-serif; color: #333; width: 100%; box-sizing: border-box; letter-spacing: 1px;}
+
+
+.effect-16{border: 0; padding: 4px 0; border-bottom: 1px solid #ccc; background-color: transparent;}
+
+/* Input regular */
+
+.effect-16 ~ .focus-border{position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color: #020FFF; transition: 0.4s;}
+.effect-16:focus ~ .focus-border,
+.has-content.effect-16 ~ .focus-border{width: 100%; transition: 0.4s;}
+.effect-16 ~ label-text{position: absolute; left: 0; width: 100%; top: 9px; color: #aaa; transition: 0.3s; z-index: -1; letter-spacing: 0.5px;}
+.effect-16:focus ~ label-text, .has-content.effect-16 ~ label-text{top: -16px; font-size: 12px; color: #020FFF; transition: 0.3s;}
+
+/* Input success */
+
+.effect-16-success{border: 0; padding: 4px 0; border-bottom: 1px solid #ccc; background-color: transparent;}
+
+.effect-16-success ~ .focus-border{position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color: #4caf50; transition: 0.4s;}
+.effect-16-success:focus ~ .focus-border,
+.has-content.effect-16-success ~ .focus-border{width: 100%; transition: 0.4s;}
+.effect-16-success ~ label-text{position: absolute; left: 0; width: 100%; top: 9px; color: #aaa; transition: 0.3s; z-index: -1; letter-spacing: 0.5px;}
+.effect-16-success:focus ~ label-text, .has-content.effect-16-success ~ label-text{top: -16px; font-size: 12px; color: #4caf50; transition: 0.3s;}
+
+/* Input alert */
+
+.effect-16-alert{border: 0; padding: 4px 0; border-bottom: 1px solid #ccc; background-color: transparent;}
+
+.effect-16-alert ~ .focus-border{position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color: #f03434; transition: 0.4s;}
+.effect-16-alert:focus ~ .focus-border,
+.has-content.effect-16-alert ~ .focus-border{width: 100%; transition: 0.4s;}
+.effect-16-alert ~ label-text{position: absolute; left: 0; width: 100%; top: 9px; color: #aaa; transition: 0.3s; z-index: -1; letter-spacing: 0.5px;}
+.effect-16-alert:focus ~ label-text, .has-content.effect-16-alert ~ label-text{top: -16px; font-size: 12px; color: #f03434; transition: 0.3s;}
+
+
+.wrapper{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 400px;
+  margin: 50vh auto 0;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.switch_box{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 200px;
+  min-width: 200px;
+  height: 200px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 
@@ -107,3 +213,50 @@ label::after {
   -o-transition: .25s all ease;
   transition: .25s all ease;
 }
+
+
+
+/* Toggle Button - Start */
+
+
+input[type="checkbox"].switch_1{
+  font-size: 30px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 3.5em;
+  height: 1.5em;
+  background: #ddd;
+  border-radius: 3em;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+input[type="checkbox"].switch_1:checked{
+  background: #0ebeff;
+}
+
+input[type="checkbox"].switch_1:after{
+  position: absolute;
+  content: "";
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  background: #fff;
+  -webkit-box-shadow: 0 0 .25em rgba(0,0,0,.3);
+  box-shadow: 0 0 .25em rgba(0,0,0,.3);
+  -webkit-transform: scale(.7);
+  transform: scale(.7);
+  left: 0;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+input[type="checkbox"].switch_1:checked:after{
+  left: calc(100% - 1.5em);
+}
+
+/* Toggle Button - End */
